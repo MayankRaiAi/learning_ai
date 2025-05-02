@@ -23,7 +23,7 @@ MODEL_NAME = "gpt-3.5-turbo"
 HIGH_TEMPERATURE = 0.9
 LOW_TEMPERATURE = 0.2
 
-def jolly_llm(model: str=MODEL_NAME, temperature: int=HIGH_TEMPERATURE):
+def openai_llm(model: str=MODEL_NAME, temperature: int=HIGH_TEMPERATURE):
     return ChatOpenAI(
         model=model,
         api_key=OPENAI_API_KEY,
