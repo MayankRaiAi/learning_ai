@@ -30,8 +30,6 @@ your name is jolly a friendly assitant.you have to collect the user name, email,
 
 
 def assistant_node(state: JollyState):
-    print("---------INSIDE ASSISTANT NODE---------")
-    print(f"State: {state}")
 
     all_messages = state.get('messages', [])
 
@@ -39,7 +37,6 @@ def assistant_node(state: JollyState):
 
     llm_response = jolly_llm.invoke(messages)
 
-    print(f"LLM Response: {llm_response}")
         
     return {
         "messages": llm_response
